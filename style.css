@@ -1,0 +1,338 @@
+/*CSS Document
+
+Theme Name: Loud Theme
+Template: twentytwenty
+
+
+*/
+
+
+
+/*-----SPLASH ----*/
+.splash {
+    background-image: url(images/slashbillede.png);
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 20%
+}
+
+.podcast_splash {
+    background-image: url(images/splash_2.png);
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 20%
+}
+
+.overlay_2 {
+    background-image: linear-gradient(#124248, rgba(18, 66, 72, 0.32), rgba(18, 66, 72, 0));
+    height: 100vh;
+}
+
+.lydfabrik {
+    margin-left: 5vw;
+}
+
+#site-header > div.header-inner.section-inner {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+#site-header {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+#site-header > div.header-inner.section-inner {
+    background-color: rgba(240, 248, 255, 0);
+}
+
+#site-header,
+.footer-nav-widgets-wrapper,
+#site-footer,
+.menu-modal,
+.menu-modal-inner,
+.search-modal-inner,
+.archive-header,
+.singular .entry-header,
+.singular .featured-media:before,
+.wp-block-pullquote:before {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+
+
+
+.modal-menu {
+    background-color: #124248;
+}
+
+#menu-item-38 a,
+#menu-item-57 a {
+    color: white;
+}
+
+/*---------------------------*/
+
+#groen {
+    background-color: #124248;
+}
+
+#popular {
+    background-color: #dc0032;
+
+}
+
+#udforsk {
+    background-color: #124248;
+
+}
+
+
+.hover_container {
+    position: relative;
+    width: 55vw
+}
+
+
+.episoder_img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 0.5vw;
+}
+
+
+.episoder_img {
+    transition: transform .2s;
+
+}
+
+.hover_container:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.hover_container {
+    /*    background-color: #124248;*/
+    /*    background-color: #dc0032;
+    */
+}
+
+.pic {
+    width: 30vw;
+
+}
+
+.podcaster_img {
+    border-radius: 15px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 15px;
+    transition: .5s ease;
+    background-color: rgba(9, 12, 93, 0.74);
+}
+
+.hover_container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 38px;
+    font-family: helvetica, sans-serif;
+    font-weight: 500;
+    width: 80vw;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.uddrag {
+    color: #ffffff;
+    font-family: helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    width: 75vw;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+#lydunivers {
+    background-color: #124248;
+
+}
+
+#hvem_er_loud {
+    background-color: #dc0032;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.col {
+    margin-left: 5vw;
+    margin-right: 7vw;
+}
+
+.dybet {
+    width: 60vw;
+    height: 45vw;
+    background-image: url(images/dybet.svg);
+    background-repeat: no-repeat;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+/*Slider*/
+.slider {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    width: 214px;
+    flex-shrink: 0;
+    height: 100%;
+
+}
+
+
+.slider > article {
+    /* CURRENT way. */
+    scroll-snap-align: start;
+}
+
+.slider {
+    scroll-behavior: smooth;
+}
+
+
+@supports (scroll-snap-type) {
+    .slider > a {
+        display: none;
+    }
+}
+
+.slider > article:target {
+    transform: scale(0.8);
+}
+
+/*----------------*/
+
+.podcast_container {
+    background-color: #124248;
+}
+
+@media (min-width:600px) {
+    .episode_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1vw;
+    }
+
+    .podcast_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .splash {
+        background-image: url(images/slashbillede.png);
+        background-size: cover;
+        height: 100vh;
+        background-position: 100%
+    }
+
+    .podcast_splash {
+        background-image: url(images/splash_2.png);
+        background-size: cover;
+        height: 100vh;
+        background-position: 60% 58%;
+    }
+
+    h2 {
+
+        font-size: 24px;
+        top: 15%;
+        width: 18vw;
+
+    }
+
+    .uddrag {
+        font-size: 17px;
+        width: 18vw;
+        top: 73%;
+        left: 50%;
+    }
+
+    .slide {
+        width: 280px;
+    }
+
+    .slider {
+        height: 389px;
+    }
+
+    .hover_container {
+        width: 20vw;
+        padding: 0vw;
+    }
+
+    .episode_container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 1.5vw;
+    }
+
+    .podcast_container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1.5vw;
+    }
+
+    .episoder_img {
+        padding: 0vw;
+    }
+
+    #hvem_er_loud {
+        background-color: #dc0032;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col {
+        margin-left: 16vw;
+        margin-right: 8vw;
+    }
+
+    .dybet {
+        width: 20vw;
+        height: 20vw;
+        margin-right: 5vw;
+        margin-top: 7vw;
+    }
+
+}
