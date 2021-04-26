@@ -14,9 +14,9 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <article>
+        <article class="single_episode_article">
             <img class="pic" src="" alt="">
-            <div>
+            <div class="single_episode_div">
                 <h2></h2>
                 <p class="beskrivelse"></p>
                 <p class="podcastnavn"></p>

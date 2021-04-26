@@ -113,8 +113,11 @@ get_header();
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
-                    if (episode.genre)
+                    if (episode.genre == 14) {
+                        populaere.appendChild(klon);
+                    } else {
                         container.appendChild(klon);
+                    }
                 }
 
             })

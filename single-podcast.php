@@ -14,25 +14,31 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <article>
+        <article class="single_article">
             <img class="single_pic" src="" alt="">
-            <div>
+            <div class="single_tekst">
                 <h2></h2>
                 <p class="beskrivelse"></p>
                 <p class="genre"></p>
             </div>
+            <button class="hoer_seneste">Hør seneste afsnit</button>
+
         </article>
 
         <section id="lytmedher">
-            <img src="svg/loud.svg">
-            <img src="svg/googlepodcast.svg">
-            <img src="svg/podcastplayer.svg">
-            <img src="svg/spotify.svg">
-            <img src="svg/podimo.svg">
-
+            <h3>Lyt med her!</h3>
+            <div class="lytmedher">
+                <img src="svg/loud.svg">
+                <img src="svg/googlepodcast.svg">
+                <img src="svg/podcastplayer.svg">
+                <img src="svg/spotify.svg">
+                <img src="svg/podimo.svg">
+            </div>
         </section>
 
         <section id="episode">
+            <h4>Alle afsnit af</h4>
+            <p>APRIL 2021</p>
             <template>
                 <article class="single_podcast">
                     <img src="" alt="">

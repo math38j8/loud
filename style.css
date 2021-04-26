@@ -138,7 +138,7 @@ Template: twentytwenty
     cursor: pointer;
 }
 
-.overlay h2 {
+.overlay h3 {
     color: #ffffff;
     font-size: 38px;
     font-family: helvetica, sans-serif;
@@ -194,6 +194,11 @@ Template: twentytwenty
     margin-top: 0vw;
 }
 
+
+.archive-title {
+    display: none;
+}
+
 /*--------SINGLE PODCAST-------*/
 .single_podcast {
     display: grid;
@@ -211,9 +216,14 @@ Template: twentytwenty
 }
 
 #lytmedher {
+    background-color: #124248;
+    display: grid;
+    justify-items: center;
+}
+
+.lytmedher {
     display: flex;
     flex-direction: row;
-    background-color: #124248;
 }
 
 
@@ -221,13 +231,39 @@ Template: twentytwenty
     width: 100%;
 }
 
+.single_tekst {
+    margin: 10vw;
+}
+
+button {
+    width: 62vw;
+    /*    background-color: #dc0032 !important;*/
+    border: solid white 2px;
+    border-radius: 22px;
+    color: white !important;
+    margin: 5vw;
+    text-transform: initial;
+}
+
+.single_article {
+    display: grid;
+    justify-items: center;
+}
+
 /*-----------------------------*/
 
 /*------SINGLE EPISODE-------*/
 .pic {
-    width: 30vw;
+    width: 100%;
 
 }
+
+.single_episode_div {
+    padding: 3vw;
+
+}
+
+
 
 /*PAGE PODCASTER*/
 .podcaster_img {
@@ -237,6 +273,7 @@ Template: twentytwenty
 .podcast_container {
     background-color: #124248;
 }
+
 
 /*------------*/
 /*Slider*/
@@ -298,7 +335,7 @@ Template: twentytwenty
         background-position: 100%
     }
 
-    .overlay h2 {
+    .overlay h3 {
 
         font-size: 24px;
         top: 16%;
@@ -328,6 +365,14 @@ Template: twentytwenty
         margin-right: 8vw;
     }
 
+    .col h2 {
+        font-size: 4rem;
+    }
+
+    .col .branchen {
+        font-size: 2rem;
+    }
+
     .dybet {
         width: 20vw;
         height: 20vw;
@@ -353,21 +398,23 @@ Template: twentytwenty
     /*SLIDER*/
 
     .slide {
-        width: 280px;
+        width: 223px;
     }
 
     .slider {
-        height: 389px;
+        height: 232px;
     }
 
     .hover_container {
-        width: 20vw;
+        width: 15vw;
         padding: 0vw;
     }
 
     .episode_container {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         gap: 1.5vw;
+        padding: 0vw;
+        padding-top: 1vw;
     }
 
     .podcast_container {
