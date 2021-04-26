@@ -42,8 +42,11 @@ get_header();
 
         <!--        <nav id="filtrering"><button data-episode="alle">Alle</button></nav>-->
         <h3>Populære podcasts</h3>
-        <section class="episode_container slider"></section>
-        <section id="lydunivers"></section>
+        <section id="populaere" class="episode_container slider"></section>
+        <section id="lydunivers">
+
+
+        </section>
 
 
         <section id="hvem_er_loud">
@@ -98,6 +101,7 @@ get_header();
         function visEpisoder() {
             let temp = document.querySelector("template");
             let container = document.querySelector(".episode_container");
+            let populaere = document.querySelector("#populaere");
             container.innerHTML = "";
             episoder.forEach(episode => {
                 if (filterEpisode == "alle" || episode.categories.includes(parseInt(filterEpisode))) {
@@ -109,7 +113,8 @@ get_header();
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
-                    container.appendChild(klon);
+                    if (episode.genre)
+                        container.appendChild(klon);
                 }
 
             })

@@ -15,21 +15,30 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <article>
-            <img class="pic" src="" alt="">
+            <img class="single_pic" src="" alt="">
             <div>
                 <h2></h2>
                 <p class="beskrivelse"></p>
+                <p class="genre"></p>
             </div>
         </article>
 
+        <section id="lytmedher">
+            <img src="svg/loud.svg">
+            <img src="svg/googlepodcast.svg">
+            <img src="svg/podcastplayer.svg">
+            <img src="svg/spotify.svg">
+            <img src="svg/podimo.svg">
+
+        </section>
+
         <section id="episode">
             <template>
-                <article>
+                <article class="single_podcast">
                     <img src="" alt="">
                     <div>
                         <h2></h2>
                         <p class="beskrivelse"></p>
-                        <a href="">læs mere</a>
                     </div>
                 </article>
             </template>
@@ -64,8 +73,9 @@ get_header();
         function visPodcaster() {
             console.log("visPodcaster")
             document.querySelector("h2").textContent = podcast.title.rendered;
-            document.querySelector(".pic").src = podcast.billede.guid;
+            document.querySelector(".single_pic").src = podcast.billede.guid;
             document.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
+            document.querySelector(".genre").textContent = podcast.genre;
 
         }
 
@@ -78,13 +88,14 @@ get_header();
                 if (episode.horer_til_podcast == aktuelpodcast) {
                     console.log("loop kører id :", aktuelpodcast);
                     let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h2").textContent = episode.title.rendered;
+                    klon.querySelector("h2").innerHTML = episode.title.rendered;
+                    klon.querySelector("img").src = episode.billede.guid;
 
-                    klon.querySelector(".beskrivelse").innerHTML = episode.beskrivelse;
+                    //                    klon.querySelector(".beskrivelse").innerHTML = episode.beskrivelse;
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
                     })
-                    klon.querySelector("a").href = episode.link;
+                    //                    klon.querySelector("a").href = episode.link;
                     console.log("episode", episode.link);
                     container.appendChild(klon);
                 }
