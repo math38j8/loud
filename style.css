@@ -57,9 +57,6 @@ Template: twentytwenty
     background-color: rgba(255, 255, 255, 0) !important;
 }
 
-
-
-
 .modal-menu {
     background-color: #124248;
 }
@@ -71,6 +68,8 @@ Template: twentytwenty
 
 /*---------------------------*/
 
+
+/*-------FORSIDE------*/
 #groen {
     background-color: #124248;
 }
@@ -85,35 +84,11 @@ Template: twentytwenty
 
 }
 
-
 .hover_container {
     position: relative;
     width: 55vw
 }
 
-/*--------SINGLE PODCAST-------*/
-.single_podcast {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    padding: 1vw;
-    gap: 2vw;
-}
-
-#episode h2 {
-    font-size: 2rem;
-}
-
-.single_podcast img {
-    border-radius: 6px;
-}
-
-#lytmedher {
-    display: flex;
-    flex-direction: row;
-    background-color: #124248;
-}
-
-/*-----------------------------*/
 
 .episoder_img {
     display: block;
@@ -143,18 +118,6 @@ Template: twentytwenty
     */
 }
 
-.pic {
-    width: 30vw;
-
-}
-
-.single_pic {
-    width: 100%;
-}
-
-.podcaster_img {
-    border-radius: 15px;
-}
 
 .overlay {
     position: absolute;
@@ -205,7 +168,6 @@ Template: twentytwenty
     text-align: center;
 }
 
-
 #lydunivers {
     background-color: #124248;
 
@@ -232,6 +194,51 @@ Template: twentytwenty
     margin-top: 0vw;
 }
 
+/*--------SINGLE PODCAST-------*/
+.single_podcast {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 1vw;
+    gap: 2vw;
+}
+
+#episode h2 {
+    font-size: 2rem;
+}
+
+.single_podcast img {
+    border-radius: 6px;
+}
+
+#lytmedher {
+    display: flex;
+    flex-direction: row;
+    background-color: #124248;
+}
+
+
+.single_pic {
+    width: 100%;
+}
+
+/*-----------------------------*/
+
+/*------SINGLE EPISODE-------*/
+.pic {
+    width: 30vw;
+
+}
+
+/*PAGE PODCASTER*/
+.podcaster_img {
+    border-radius: 15px;
+}
+
+.podcast_container {
+    background-color: #124248;
+}
+
+/*------------*/
 /*Slider*/
 .slider {
     width: 100%;
@@ -272,34 +279,23 @@ Template: twentytwenty
 
 /*----------------*/
 
-.podcast_container {
-    background-color: #124248;
-}
+
 
 @media (min-width:600px) {
+
+    /*    FORSIDE */
     .episode_container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 1vw;
     }
 
-    .podcast_container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
+    /*    ----splash*/
     .splash {
         background-image: url(images/slashbillede.png);
         background-size: cover;
         height: 100vh;
         background-position: 100%
-    }
-
-    .podcast_splash {
-        background-image: url(images/splash_2.png);
-        background-size: cover;
-        height: 100vh;
-        background-position: 60% 58%;
     }
 
     .overlay h2 {
@@ -316,6 +312,45 @@ Template: twentytwenty
         top: 73%;
         left: 50%;
     }
+
+    .episoder_img {
+        padding: 0vw;
+    }
+
+    #hvem_er_loud {
+        background-color: #dc0032;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col {
+        margin-left: 16vw;
+        margin-right: 8vw;
+    }
+
+    .dybet {
+        width: 20vw;
+        height: 20vw;
+        margin-right: 5vw;
+        margin-top: 7vw;
+    }
+
+
+    /*    PAGE PODCASTER */
+    .podcast_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /*----splash*/
+    .podcast_splash {
+        background-image: url(images/splash_2.png);
+        background-size: cover;
+        height: 100vh;
+        background-position: 60% 58%;
+    }
+
+    /*SLIDER*/
 
     .slide {
         width: 280px;
@@ -340,26 +375,5 @@ Template: twentytwenty
         gap: 1.5vw;
     }
 
-    .episoder_img {
-        padding: 0vw;
-    }
-
-    #hvem_er_loud {
-        background-color: #dc0032;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .col {
-        margin-left: 16vw;
-        margin-right: 8vw;
-    }
-
-    .dybet {
-        width: 20vw;
-        height: 20vw;
-        margin-right: 5vw;
-        margin-top: 7vw;
-    }
 
 }
