@@ -6,7 +6,9 @@ Template: twentytwenty
 
 */
 
-
+#post-27 {
+    display: none;
+}
 
 /*-----SPLASH ----*/
 .splash {
@@ -207,6 +209,11 @@ Template: twentytwenty
 
 .archive-title {
     display: none;
+}
+
+.knap_div {
+    display: grid;
+    justify-items: center;
 }
 
 /*--------SINGLE PODCAST-------*/

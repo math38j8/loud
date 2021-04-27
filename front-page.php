@@ -47,6 +47,10 @@
 <main id="site-content" role="main">
     <h2 class="popular_podcast">Populære podcasts</h2>
     <section id="populaere" class="episode_container slider"></section>
+    <div class="knap_div">
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">
+            <button class="hoer_seneste">Se mere</button> </a>
+    </div>
     <section id="lydunivers">
         <h2>Udforsk LOUDS lydunivers</h2>
         <h3>Aktuelle emner i samfundet</h3>
