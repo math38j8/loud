@@ -23,6 +23,9 @@
 
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/custom.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;900&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
