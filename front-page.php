@@ -45,11 +45,16 @@
 
 
 <main id="site-content" role="main">
-    <h2>Populære podcasts</h2>
+    <h2 class="popular_podcast">Populære podcasts</h2>
     <section id="populaere" class="episode_container slider"></section>
     <section id="lydunivers">
         <h2>Udforsk LOUDS lydunivers</h2>
+        <h3>Aktuelle emner i samfundet</h3>
         <section id="aktuelt" class="episode_container slider"></section>
+        <h3>Satire med et glimt i øjet</h3>
+        <section id="satire" class="episode_container slider"></section>
+        <h3>Spændende personligheder</h3>
+        <section id="biografi" class="episode_container slider"></section>
 
     </section>
 
@@ -164,21 +169,21 @@
 
 <script>
     let podcaster;
-    let genre;
+    //    let genre;
     let filterPodcast = "alle";
 
 
     const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast?per_page=100";
 
-    const genreUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/genre";
+    //    const genreUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/genre";
 
     async function getJson() {
         console.log("getJson");
         const data = await fetch(dbUrl);
-        const genredata = await fetch(genreUrl);
+        //        const genredata = await fetch(genreUrl);
         podcaster = await data.json();
-        genre = await genredata.json();
-        console.log(genre);
+        //        genre = await genredata.json();
+        //        console.log(genre);
         visPodcaster();
 
     }
@@ -192,25 +197,33 @@
 
         let populaere = document.querySelector("#populaere");
         let aktuelt = document.querySelector("#aktuelt");
+        let satire = document.querySelector("#satire");
+        let biografi = document.querySelector("#biografi");
         container.innerHTML = "";
 
+        console.log(podcaster);
         podcaster.forEach(podcast => {
-            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
-                let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = podcast.title.rendered;
-                klon.querySelector("img").src = podcast.billede.guid;
+            //            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
+            let klon = temp.cloneNode(true).content;
+            klon.querySelector("h3").innerHTML = podcast.title.rendered;
+            klon.querySelector("img").src = podcast.billede.guid;
 
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = podcast.link;
-                })
-                if (podcast.genre == 13) {
-                    populaere.appendChild(klon);
-                }
-                if (podcast.genre == 14) {
-                    aktuelt.appendChild(klon);
-                } else {
-                    container.appendChild(klon);
-                }
+            klon.querySelector("article").addEventListener("click", () => {
+                location.href = podcast.link;
+            })
+            if (podcast.genre.includes(parseInt(13))) {
+                populaere.appendChild(klon);
+            }
+            if (podcast.genre.includes(parseInt(14))) {
+                console.log("14", podcast);
+                aktuelt.appendChild(klon);
+            }
+            if (podcast.genre.includes(parseInt(19))) {
+                console.log("19", podcast);
+                satire.appendChild(klon);
+            } else if (podcast.genre.includes(parseInt(12))) {
+                console.log("12", podcast);
+                biografi.appendChild(klon);
             }
         })
 

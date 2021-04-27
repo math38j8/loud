@@ -22,7 +22,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
-
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/custom.css">
 </head>
 
 <body <?php body_class(); ?>>

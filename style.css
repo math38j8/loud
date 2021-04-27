@@ -72,15 +72,18 @@ Template: twentytwenty
 /*-------FORSIDE------*/
 #groen {
     background-color: #124248;
+    text-align: center;
 }
 
 #popular {
     background-color: #dc0032;
+    text-align: center;
 
 }
 
 #udforsk {
     background-color: #124248;
+    text-align: center;
 
 }
 
@@ -89,6 +92,13 @@ Template: twentytwenty
     width: 55vw
 }
 
+.toggle {
+    width: 15vw;
+}
+
+.toggle-text {
+    color: white !important;
+}
 
 .episoder_img {
     display: block;
@@ -130,7 +140,7 @@ Template: twentytwenty
     opacity: 0;
     border-radius: 15px;
     transition: .5s ease;
-    background-color: rgba(9, 12, 93, 0.74);
+    background-color: rgba(18, 66, 72, 0.72);
 }
 
 .hover_container:hover .overlay {
@@ -203,29 +213,49 @@ Template: twentytwenty
 .single_podcast {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 1vw;
-    gap: 2vw;
+    padding: 0vw;
+    gap: 0vw;
+}
+
+#episode {
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 #episode h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    height: 10vw;
 }
 
 .single_podcast img {
     border-radius: 6px;
 }
 
-#lytmedher {
-    background-color: #124248;
-    display: grid;
-    justify-items: center;
-}
 
 .lytmedher {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
 }
 
+
+element {}
+
+.lytmedher img {
+
+    width: 5vw;
+    margin-top: 0vw;
+    padding: 1vw;
+    height: 5vw;
+
+}
+
+.hoer_seneste {
+    background-color: transparent;
+    width: 55vw;
+    justify-self: center;
+}
 
 .single_pic {
     width: 100%;
@@ -233,6 +263,11 @@ Template: twentytwenty
 
 .single_tekst {
     margin: 10vw;
+    display: grid;
+}
+
+.lytmedher {
+    margin-bottom: 6vw;
 }
 
 button {
@@ -248,6 +283,31 @@ button {
 .single_article {
     display: grid;
     justify-items: center;
+}
+
+.linje {
+    width: 75vw;
+    height: 0.2vw;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+
+.afsnit_navn {
+    margin-left: 2vw;
+}
+
+.afsnit_navn h2 {
+    margin-top: 5vw;
+    margin-bottom: 9vw;
+}
+
+.maaned {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.semere {
+    margin-left: 12vw;
 }
 
 /*-----------------------------*/
@@ -268,6 +328,7 @@ button {
 /*PAGE PODCASTER*/
 .podcaster_img {
     border-radius: 15px;
+    filter: drop-shadow(5px 5px 5px #0000005e);
 }
 
 .podcast_container {
@@ -380,6 +441,11 @@ button {
         margin-top: 7vw;
     }
 
+    .popular_podcast {
+        margin-bottom: 1vw;
+        margin-left: 5vw;
+    }
+
 
     /*    PAGE PODCASTER */
     .podcast_container {
@@ -415,6 +481,8 @@ button {
         gap: 1.5vw;
         padding: 0vw;
         padding-top: 1vw;
+        height: 18vw;
+        margin-bottom: 2vw;
     }
 
     .podcast_container {
@@ -423,4 +491,88 @@ button {
     }
 
 
+    /*    SINGLE PODCAST*/
+    .single_pic {
+        width: 60%;
+        border-radius: 22px;
+        filter: drop-shadow(5px 5px 5px #0000005e);
+
+    }
+
+    .single_article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .single_col {
+        justify-items: center;
+        display: grid;
+    }
+
+    button {
+        width: 14vw;
+    }
+
+    .hoer_seneste {
+        width: 19vw;
+    }
+
+    .single_tekst {
+        margin-top: -4vw;
+        margin-left: 8vw;
+        margin-right: 9vw;
+        margin-bottom: 0vw;
+    }
+
+    .single_episode {
+        width: 11vw;
+    }
+
+    #episode {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    #episode h2 {
+        font-size: 2.5rem;
+        height: 6vw;
+    }
+
+    .afsnit_navn {
+        margin-left: -6vw;
+    }
+
+    .afsnit_navn h2 {
+        margin-top: 5vw;
+        margin-bottom: 1vw;
+    }
+
+    .linje {
+        width: 75vw;
+        height: 0.1vw;
+        background-color: white;
+        margin-bottom: 1vw;
+    }
+
+    .maaned {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .semere {
+        margin-left: 29vw;
+    }
+
+    #forslag {
+        background-color: #124248;
+    }
+
+
+    /*    SINGLE EPISODE*/
+
+    .pic {
+        width: 60%;
+        border-radius: 22px;
+        filter: drop-shadow(5px 5px 5px #0000005e);
+    }
 }

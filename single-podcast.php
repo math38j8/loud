@@ -15,39 +15,77 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <article class="single_article">
-            <img class="single_pic" src="" alt="">
+            <div class="single_col">
+                <img class="single_pic" src="" alt="">
+                <div class="lytmedher">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/googlepodcast.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podcastplayer.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/spotify.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podimo.svg">
+                </div>
+            </div>
             <div class="single_tekst">
                 <h2></h2>
                 <p class="beskrivelse"></p>
                 <p class="genre"></p>
+                <button class="hoer_seneste">Hør seneste afsnit</button>
+
             </div>
-            <button class="hoer_seneste">Hør seneste afsnit</button>
 
         </article>
 
-        <section id="lytmedher">
-            <h3>Lyt med her!</h3>
-            <div class="lytmedher">
-                <img src="svg/loud.svg">
-                <img src="svg/googlepodcast.svg">
-                <img src="svg/podcastplayer.svg">
-                <img src="svg/spotify.svg">
-                <img src="svg/podimo.svg">
-            </div>
-        </section>
+
 
         <section id="episode">
             <h4>Alle afsnit af</h4>
-            <p>APRIL 2021</p>
+            <div class="maaned">
+                <p>APRIL 2021</p>
+                <p class="semere">SE MINDRE</p>
+            </div>
+            <div class="linje"></div>
+
             <template>
                 <article class="single_podcast">
-                    <img src="" alt="">
-                    <div>
+                    <img class="single_episode" src="" alt="">
+                    <div class="afsnit_navn">
                         <h2></h2>
                         <p class="beskrivelse"></p>
                     </div>
                 </article>
             </template>
+
+
+        </section>
+        <section id="episode">
+            <div class="maaned">
+                <p>MARTS 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+
+            <div class="maaned">
+                <p>FEBRUAR 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+
+
+            <div class="maaned">
+                <p>JANUAR 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+
+            <div class="maaned">
+                <p>DECEMBER 2020</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+        </section>
+
+        <section id="forslag">
+            <h2>Vi tror at du kan lide</h2>
         </section>
 
     </main><!-- #main -->
@@ -55,9 +93,12 @@ get_header();
         let podcast;
         let episode;
         let aktuelpodcast = <?php echo get_the_ID() ?>;
+        let genreArray;
 
         const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast/" + aktuelpodcast;
         const episodeURL = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode?per_page=100";
+        const genreUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/genre?per_page=100";
+
 
         const container = document.querySelector("#episode");
 
@@ -71,10 +112,17 @@ get_header();
             episode = await data2.json();
             console.log("episode: ", episode)
 
+            const data3 = await fetch(genreUrl);
+            genreArray = await data3.json();
 
+            //            visGenre();
             visPodcaster();
             visEpisode();
         }
+
+        //        function visGenre() {
+        //            genreArray.forEach(genre=>)
+        //        }
 
         function visPodcaster() {
             console.log("visPodcaster")
