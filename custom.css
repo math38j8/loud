@@ -1,39 +1,42 @@
-/*forside*/
-.episode_container {
-    margin-left: 5vw;
-    width: 89vw;
-}
+@media (min-width:600px) {
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
+    /*forside*/
+    .episode_container {
+        margin-left: 5vw;
+        width: 89vw;
+    }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+    }
 
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    margin-left: 5vw;
-}
+    h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+    }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-}
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        margin-left: 5vw;
+    }
 
-button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+    }
 
-#udforskLoudsLydunivers {
-    margin-left: 5vw;
-}
+    button {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+    }
 
-.branchen {
-    margin-left: 0vw;
+    #udforskLoudsLydunivers {
+        margin-left: 5vw;
+    }
+
+    .branchen {
+        margin-left: 0vw;
+    }
 }
