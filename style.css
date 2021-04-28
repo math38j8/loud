@@ -83,9 +83,24 @@ Template: twentytwenty
 }
 
 #udforsk {
-    background-color: #124248;
+    background-color: #dc0032;
     text-align: center;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+#udforsk .slide {
+    width: 33vw;
+}
+
+#udforsk .hover_container {
+    width: 28vw;
+}
+
+#udforsk h4 {
+    width: 31vw;
+    font-size: 2rem;
 }
 
 .hover_container {
@@ -149,7 +164,7 @@ Template: twentytwenty
     cursor: pointer;
 }
 
-.overlay h3 {
+.overlay h4 {
     color: #ffffff;
     font-size: 38px;
     font-family: helvetica, sans-serif;
@@ -342,6 +357,29 @@ button {
 }
 
 
+.filter {
+    background-color: transparent;
+    width: 40vw;
+    height: 14vw;
+}
+
+.filter_button {
+    background-color: transparent;
+    width: 40vw;
+    height: 14vw;
+}
+
+.podcast_article {
+    width: 129px;
+    height: 100%;
+}
+
+.hover_container_podcast {
+    position: relative;
+    width: 31vw;
+}
+
+
 /*------------*/
 /*Slider*/
 .slider {
@@ -402,7 +440,7 @@ button {
         background-position: 100%
     }
 
-    .overlay h3 {
+    .overlay h4 {
 
         font-size: 24px;
         top: 16%;
@@ -581,4 +619,43 @@ button {
         border-radius: 22px;
         filter: drop-shadow(5px 5px 5px #0000005e);
     }
+
+    /*    PODCAST PAGE*/
+    .filter {
+        background-color: transparent;
+        width: 13vw;
+        height: 4vw;
+    }
+
+    .filter_button {
+        background-color: transparent;
+        width: 13vw;
+        height: 4vw;
+    }
+
+    #filtrering {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .seneste_epis {
+        grid-template-columns: repeat(14, 1fr);
+        gap: 1.5vw;
+        padding: 0vw;
+        padding-top: 0vw;
+        padding-top: 1vw;
+        height: 18vw;
+        margin-bottom: 2vw;
+        margin-left: 5vw;
+        width: 89vw;
+    }
+
+    #udforsk {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: auto;
+        width: 89vw;
+        padding: 2vw;
+    }
+
 }

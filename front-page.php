@@ -31,7 +31,7 @@
                 <div class="hover_container aktuelt_container">
                     <img class="podcaster_img" src="" alt="">
                     <div class="overlay">
-                        <h3></h3>
+                        <h4></h4>
                         <p class="beskrivelse"></p>
                     </div>
 
@@ -212,7 +212,7 @@
 
             //            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
             let klon = temp.cloneNode(true).content;
-            klon.querySelector("h3").innerHTML = podcast.title.rendered;
+            klon.querySelector("h4").innerHTML = podcast.title.rendered;
             klon.querySelector("img").src = podcast.billede.guid;
 
             klon.querySelector("article").addEventListener("click", () => {
@@ -224,7 +224,7 @@
             if (podcast.genre.includes(parseInt(14))) {
                 console.log("14", podcast.genre);
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
 
                 aktuelt.appendChild(klon);
@@ -233,14 +233,14 @@
             if (podcast.genre.includes(parseInt(12))) {
                 console.log("12", podcast);
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
                 satire.appendChild(klon);
             };
             if (podcast.genre.includes(parseInt(19))) {
                 console.log("19", podcast);
                 let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
                 biografi.appendChild(klon);
             }

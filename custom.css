@@ -4,6 +4,7 @@
     .episode_container {
         margin-left: 5vw;
         width: 89vw;
+        padding: 1vw;
     }
 
     h1 {
@@ -41,10 +42,7 @@
     }
 
     /*    PODCAST-SIDE*/
-    #udforsk {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+
 
     /*footer*/
     #site-footer {

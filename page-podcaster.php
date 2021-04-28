@@ -23,7 +23,7 @@ get_header();
                 <div class="hover_container">
                     <img class="podcaster_img" src="" alt="">
                     <div class="overlay">
-                        <h2></h2>
+                        <h4></h4>
                         <p class="beskrivelse"></p>
                     </div>
 
@@ -49,8 +49,8 @@ get_header();
             <section id="populaere episode_container slider"></section>
         </section>
 -->
-        <nav id="filtrering"><button data-episode="alle">Alle</button></nav>
-        <section id="udforsk">
+        <nav id="filtrering"><button class="filter_button" data-episode="alle">Alle</button></nav>
+        <section id="udforsk" class="episode_container slider">
 
         </section>
 
@@ -65,7 +65,7 @@ get_header();
 
         const episodeUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode?per_page=100";
         const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast?per_page=100";
-        const catUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/categories";
+        const catUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/genre";
 
         async function getJson() {
             console.log("getJson");
@@ -98,9 +98,9 @@ get_header();
 
         function filtrering() {
             filterPodcast = this.dataset.podcast;
-            console.log(filterPodcast);
+            console.log("filterPodcast", filterPodcast);
 
-            //            visPodcaster();
+            visPodcaster();
         }
 
         function visEpisoder() {
@@ -108,9 +108,10 @@ get_header();
             let episode_container = document.querySelector(".seneste_epis");
             episode_container.innerHTML = "";
             episoder.forEach(episode => {
-                if (filterPodcast == "alle" || episode.categories.includes(parseInt(filterPodcast))) {
+                if (episode.seneste == 1) {
+                    console.log(episode.seneste);
                     let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h2").innerHTML = episode.title.rendered;
+                    klon.querySelector("h4").innerHTML = episode.title.rendered;
                     klon.querySelector("img").src = episode.billede.guid;
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = episode.link;
@@ -124,10 +125,12 @@ get_header();
         function visPodcaster() {
             let temp = document.querySelector("template");
             let container = document.querySelector("#udforsk");
+            container.innerHTML = "";
             podcaster.forEach(podcast => {
-                if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
+                console.log("podcast.genre", podcast.genre);
+                if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
                     let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h2").textContent = podcast.title.rendered;
+                    klon.querySelector("h4").textContent = podcast.title.rendered;
                     klon.querySelector("img").src = podcast.billede.guid;
                     // klon.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
                     // klon.querySelector(".podcastnavn").textContent = episode.podcastnavn;
