@@ -172,7 +172,12 @@
 
 
 <script>
+    let populaere = document.querySelector("#populaere");
+    let aktuelt = document.querySelector("#lydunivers #aktuelt");
+    let satire = document.querySelector("#lydunivers #satire");
+    let biografi = document.querySelector("#lydunivers #biografi");
     let podcaster;
+
     //    let genre;
     let filterPodcast = "alle";
 
@@ -199,14 +204,12 @@
         let temp = document.querySelector("template");
         let container = document.querySelector(".episode_container");
 
-        let populaere = document.querySelector("#populaere");
-        let aktuelt = document.querySelector("#aktuelt");
-        let satire = document.querySelector("#satire");
-        let biografi = document.querySelector("#biografi");
+
         container.innerHTML = "";
 
         console.log(podcaster);
         podcaster.forEach(podcast => {
+
             //            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
             let klon = temp.cloneNode(true).content;
             klon.querySelector("h3").innerHTML = podcast.title.rendered;
@@ -214,19 +217,31 @@
 
             klon.querySelector("article").addEventListener("click", () => {
                 location.href = podcast.link;
-            })
+            });
             if (podcast.genre.includes(parseInt(13))) {
                 populaere.appendChild(klon);
-            }
+            };
             if (podcast.genre.includes(parseInt(14))) {
-                console.log("14", podcast);
+                console.log("14", podcast.genre);
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("img").src = podcast.billede.guid;
+
                 aktuelt.appendChild(klon);
-            }
+                // aktuelt.innerHTML += "hej";
+            };
+            if (podcast.genre.includes(parseInt(12))) {
+                console.log("12", podcast);
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("img").src = podcast.billede.guid;
+                satire.appendChild(klon);
+            };
             if (podcast.genre.includes(parseInt(19))) {
                 console.log("19", podcast);
-                satire.appendChild(klon);
-            } else if (podcast.genre.includes(parseInt(12))) {
-                console.log("12", podcast);
+                let klon = temp.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = podcast.title.rendered;
+                klon.querySelector("img").src = podcast.billede.guid;
                 biografi.appendChild(klon);
             }
         })
