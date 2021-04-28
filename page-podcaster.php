@@ -39,7 +39,6 @@ get_header();
     <main id="main" class="site-main">
         <!--        <div class="singular-content-wrap">-->
 
-        <!--        <nav id="filtrering"><button data-episode="alle">Alle</button></nav>-->
         <section id="groen">
             <h3>Seneste episoder</h3>
             <section class="seneste_epis  slider"></section>
@@ -50,6 +49,7 @@ get_header();
             <section id="populaere episode_container slider"></section>
         </section>
 -->
+        <nav id="filtrering"><button data-episode="alle">Alle</button></nav>
         <section id="udforsk">
 
         </section>
@@ -78,7 +78,7 @@ get_header();
             console.log(categories);
             visEpisoder();
             visPodcaster();
-            //            opretKnapper();
+            opretKnapper();
 
         }
 
