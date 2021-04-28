@@ -1,3 +1,9 @@
+/*forside*/
+.episode_container {
+    margin-left: 5vw;
+    width: 89vw;
+}
+
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -11,6 +17,7 @@ h2 {
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+    margin-left: 5vw;
 }
 
 p {
@@ -21,4 +28,12 @@ p {
 button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+}
+
+#udforskLoudsLydunivers {
+    margin-left: 5vw;
+}
+
+.branchen {
+    margin-left: 0vw;
 }
