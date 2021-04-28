@@ -39,4 +39,11 @@
     .branchen {
         margin-left: 0vw;
     }
+
+    /*    PODCAST-SIDE*/
+
+    #udforsk {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

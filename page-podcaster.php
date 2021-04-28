@@ -51,9 +51,7 @@ get_header();
         </section>
 -->
         <section id="udforsk">
-            <h3>Udforsk LOUDS lydunivers</h3>
-            <h3>Satire med et glimt i øjet</h3>
-            <h3>Spændende personligheder</h3>
+
         </section>
 
         <!--        </div>  .singular-content-wrap -->
@@ -125,7 +123,7 @@ get_header();
 
         function visPodcaster() {
             let temp = document.querySelector("template");
-            let popular_container = document.querySelector("#popular_podcasts");
+            let container = document.querySelector("#udforsk");
             podcaster.forEach(podcast => {
                 if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
                     let klon = temp.cloneNode(true).content;
@@ -137,7 +135,7 @@ get_header();
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = podcast.link;
                     })
-                    popular_container.appendChild(klon);
+                    container.appendChild(klon);
                 }
 
             })
