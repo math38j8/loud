@@ -42,10 +42,11 @@ get_header();
         <!--        <nav id="filtrering"><button data-episode="alle">Alle</button></nav>-->
         <section id="groen">
             <h3>Seneste episoder</h3>
-            <section class="podcast_container slider"></section>
+            <section class="seneste_epis slider"></section>
         </section>
         <section id="popular">
             <h3>Populære podcasts</h3>
+            <section id="popular_podcasts slider"></section>
         </section>
         <section id="udforsk">
             <h3>Udforsk LOUDS lydunivers</h3>
@@ -57,10 +58,12 @@ get_header();
     </main><!-- #main -->
 
     <script>
+        let episoder;
         let podcaster;
         let categories;
         let filterPodcast = "alle";
 
+        const episodeUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode?per_page=100";
         const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast?per_page=100";
         const catUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/categories";
 
@@ -68,9 +71,12 @@ get_header();
             console.log("getJson");
             const data = await fetch(dbUrl);
             const catdata = await fetch(catUrl);
+            const epidata = await fetch(episodeUrl);
+            episoder = await epidata.json();
             podcaster = await data.json();
             categories = await catdata.json();
             console.log(categories);
+            visEpisoder();
             visPodcaster();
             //            opretKnapper();
 
@@ -94,13 +100,30 @@ get_header();
             filterPodcast = this.dataset.podcast;
             console.log(filterPodcast);
 
-            visPodcaster();
+            //            visPodcaster();
+        }
+
+        function visEpisoder() {
+            let temp = document.querySelector("template");
+            let episode_container = document.querySelector(".seneste_epis");
+            episode_container.innerHTML = "";
+            episoder.forEach(episode => {
+                if (filterPodcast == "alle" || episode.categories.includes(parseInt(filterPodcast))) {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").innerHTML = episode.title.rendered;
+                    klon.querySelector("img").src = episode.billede.guid;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = episode.link;
+                    })
+                    episode_container.appendChild(klon);
+                }
+
+            })
         }
 
         function visPodcaster() {
             let temp = document.querySelector("template");
-            let container = document.querySelector(".podcast_container");
-            container.innerHTML = "";
+            let popular_container = document.querySelector("#popular_podcasts");
             podcaster.forEach(podcast => {
                 if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
                     let klon = temp.cloneNode(true).content;
@@ -112,7 +135,7 @@ get_header();
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = podcast.link;
                     })
-                    container.appendChild(klon);
+                    popular_container.appendChild(klon);
                 }
 
             })
