@@ -44,10 +44,12 @@ get_header();
             <h3>Seneste episoder</h3>
             <section class="seneste_epis  slider"></section>
         </section>
+        <!--
         <section id="popular">
             <h3>Populære podcasts</h3>
             <section id="populaere episode_container slider"></section>
         </section>
+-->
         <section id="udforsk">
             <h3>Udforsk LOUDS lydunivers</h3>
             <h3>Satire med et glimt i øjet</h3>
@@ -121,64 +123,28 @@ get_header();
             })
         }
 
-        //        function visPodcaster() {
-        //            let temp = document.querySelector("template");
-        //            let popular_container = document.querySelector("#popular_podcasts");
-        //            podcaster.forEach(podcast => {
-        //                if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
-        //                    let klon = temp.cloneNode(true).content;
-        //                    klon.querySelector("h2").textContent = podcast.title.rendered;
-        //                    klon.querySelector("img").src = podcast.billede.guid;
-        //                    // klon.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
-        //                    // klon.querySelector(".podcastnavn").textContent = episode.podcastnavn;
-        //                    // klon.querySelector(".udgivelsesdato").textContent = episode.udgivelsesdato;
-        //                    klon.querySelector("article").addEventListener("click", () => {
-        //                        location.href = podcast.link;
-        //                    })
-        //                    popular_container.appendChild(klon);
-        //                }
-        //
-        //            })
-        //        }
-
-
         function visPodcaster() {
             let temp = document.querySelector("template");
-            let container = document.querySelector(".episode_container");
-
-            let populaere = document.querySelector("#populaere");
-            let aktuelt = document.querySelector("#aktuelt");
-            let satire = document.querySelector("#satire");
-            let biografi = document.querySelector("#biografi");
-            container.innerHTML = "";
-
-            console.log(podcaster);
+            let popular_container = document.querySelector("#popular_podcasts");
             podcaster.forEach(podcast => {
-                //            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
-                let klon = temp.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = podcast.title.rendered;
-                klon.querySelector("img").src = podcast.billede.guid;
+                if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").textContent = podcast.title.rendered;
+                    klon.querySelector("img").src = podcast.billede.guid;
+                    // klon.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
+                    // klon.querySelector(".podcastnavn").textContent = episode.podcastnavn;
+                    // klon.querySelector(".udgivelsesdato").textContent = episode.udgivelsesdato;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = podcast.link;
+                    })
+                    popular_container.appendChild(klon);
+                }
 
-                klon.querySelector("article").addEventListener("click", () => {
-                    location.href = podcast.link;
-                })
-                if (podcast.genre.includes(parseInt(13))) {
-                    populaere.appendChild(klon);
-                }
-                if (podcast.genre.includes(parseInt(14))) {
-                    console.log("14", podcast);
-                    aktuelt.appendChild(klon);
-                }
-                if (podcast.genre.includes(parseInt(19))) {
-                    console.log("19", podcast);
-                    satire.appendChild(klon);
-                } else if (podcast.genre.includes(parseInt(12))) {
-                    console.log("12", podcast);
-                    biografi.appendChild(klon);
-                }
             })
-
         }
+
+
+
 
 
         getJson();
