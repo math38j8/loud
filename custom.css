@@ -11,10 +11,8 @@ h4 {
 
 /*FOOTER */
 
-.afspiller {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+.afspiller_div {
+    display: none;
 }
 
 .footer_logo {
@@ -212,6 +210,19 @@ i {
         position: relative;
         left: 0.5vw;
         margin-bottom: 11vw;
+    }
+
+    .afspiller {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+    }
+
+    .afspiller_div {
+        display: block;
+        position: sticky;
+        top: 48vw;
+        z-index: 9;
     }
 }
 
