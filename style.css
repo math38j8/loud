@@ -424,6 +424,7 @@ button {
 #filtrering {
     display: grid;
     justify-content: right;
+    background-color: #124248;
 }
 
 /*------------*/
@@ -594,6 +595,7 @@ button {
         background-color: transparent;
         width: 14vw;
         margin: 0 5vw;
+        margin-bottom: 2vw;
     }
 
     .filtreringsknap {
@@ -729,6 +731,7 @@ button {
     #filtrering {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
     }
 
     .seneste_epis {
