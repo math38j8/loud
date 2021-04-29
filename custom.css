@@ -126,21 +126,29 @@ i {
     /*    PODCAST-SIDE*/
     h4 {
         font-size: 2.5rem;
+        font-weight: 200;
     }
 
     #alleafsnit {
         margin-top: -1vw;
         font-size: 3.2rem;
+        font-weight: 700;
     }
 
     /*footer*/
     #site-footer {
         background-color: #0d353a;
+        padding-bottom: 5rem;
     }
 
     #site-footer .section-inner {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+
+    .section-inner {
+        max-width: 100vw;
+        margin: 0;
     }
 
     .footer_logo {

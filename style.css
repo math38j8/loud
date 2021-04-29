@@ -609,6 +609,7 @@ button {
     #episode h2 {
         font-size: 2rem;
         height: 6vw;
+        font-weight: 500;
     }
 
     .afsnit_navn {
