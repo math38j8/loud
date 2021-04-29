@@ -16,6 +16,9 @@
 
     <div class="section-inner">
 
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg" class="footer_logo">
+
+
         <div class="footer-credits">
 
             <p class="footer-copyright">&copy;
