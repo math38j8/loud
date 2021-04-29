@@ -447,6 +447,13 @@ button {
 
 @media (min-width:600px) {
 
+    /*MENU*/
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
     /*    FORSIDE */
     .episode_container {
         display: grid;
