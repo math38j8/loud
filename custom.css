@@ -1,3 +1,8 @@
+h4 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
 /*FOOTER */
 .footer_logo {
     width: 10vw;
@@ -124,11 +129,6 @@ i {
     }
 
     /*    PODCAST-SIDE*/
-    h4 {
-        font-size: 2.5rem;
-        font-weight: 200;
-    }
-
     #alleafsnit {
         margin-top: -1vw;
         font-size: 3.2rem;
@@ -138,7 +138,7 @@ i {
     /*footer*/
     #site-footer {
         background-color: #0d353a;
-        padding-bottom: 5rem;
+        padding-bottom: 6rem;
     }
 
     #site-footer .section-inner {
