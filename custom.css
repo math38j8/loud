@@ -144,11 +144,8 @@ i {
     #site-footer .section-inner {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    }
-
-    .section-inner {
         max-width: 100vw;
-        margin: 0;
+        margin: 5vw;
     }
 
     .footer_logo {
