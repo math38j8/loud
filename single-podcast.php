@@ -56,9 +56,9 @@ get_header();
                     </div>
                 </article>
             </template>
-
-
         </section>
+
+
         <section id="episode">
             <div class="maaned">
                 <p>MARTS 2021</p>
@@ -86,9 +86,13 @@ get_header();
             <div class="linje"></div>
         </section>
 
+
+
+<!--
         <section id="forslag">
             <h2>Vi tror, at du kan lide</h2>
         </section>
+-->
 
     </main><!-- #main -->
     <script>

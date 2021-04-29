@@ -189,10 +189,8 @@
     async function getJson() {
         console.log("getJson");
         const data = await fetch(dbUrl);
-        //        const genredata = await fetch(genreUrl);
         podcaster = await data.json();
-        //        genre = await genredata.json();
-        //        console.log(genre);
+
         visPodcaster();
 
     }
@@ -257,8 +255,7 @@
                     location.href = podcast.link;
                 });
 
-                biografi.appendChild(klon);
-            }
+                biografi.appendChild(klon);            }
         })
 
     }
