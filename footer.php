@@ -17,6 +17,27 @@
     <div class="section-inner">
 
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg" class="footer_logo">
+        <h2>Om LOUD</h2>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">Hvem er vi?</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">LOUD LAB</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">Job</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">Presse</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">Praktikant</a>
+
+        <h2>Indhold</h2>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Podcasts</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Lyt med</a>
+        <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Sendeplan</a>
+
+        <h2>Hold dig opdateret</h2>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/googleplay.png">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg">
+
+
 
 
         <div class="footer-credits">

@@ -3,6 +3,34 @@
     width: 10vw;
 }
 
+#site-footer .section-inner {
+    align-items: baseline;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer img {
+    width: 60%;
+}
+
+footer {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+footer h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+footer p,
+footer a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
 @media (min-width:600px) {
 
     /*forside*/
