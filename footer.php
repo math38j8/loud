@@ -38,9 +38,9 @@
 
         <div class="footer_column">
             <h2>Hold dig opdateret</h2>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/facebook.svg" class="some_icons">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/instagram.svg" class="some_icons">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/youtube.svg" class="some_icons">
         </div>
 
         <div class="footer_column apple_google">
