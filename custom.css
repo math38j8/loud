@@ -43,7 +43,8 @@ footer a {
     text-align: center;
     justify-items: center;
 }
-}
+
+
 
 .fa fa-instagram {
     color: white;
@@ -121,6 +122,22 @@ i {
     #site-footer .section-inner {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+
+    .footer_logo {
+        position: relative;
+        top: 8vw;
+
+    }
+
+    .apple_google {
+        position: relative;
+        top: 9vw;
+    }
+
+    .footer_column {
+
+        justify-items: left;
     }
 }
 

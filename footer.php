@@ -43,7 +43,7 @@
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </div>
 
-        <div class="footer_column">
+        <div class="footer_column apple_google">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/googleplay.png">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg" class="appstore">
         </div>
