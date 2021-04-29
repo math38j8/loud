@@ -642,13 +642,23 @@ button {
 
     .lytmedher img {
         width: 5vw;
-        margin-top: -4vw;
+        margin-top: 2vw;
         padding: 1vw;
         height: 5vw;
     }
 
     .lytmedher {
         margin-bottom: 0vw;
+    }
+
+    .podcastnavn {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        text-align: left;
+        font-size: 2rem;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 0.5vw;
     }
 
     /*    SINGLE EPISODE*/
