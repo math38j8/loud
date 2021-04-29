@@ -35,11 +35,7 @@ get_header();
     </div>
 </div>
 
-<div class="afspiller_div">
-    <div class="afspiller">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/afspiller.png">
-    </div>
-</div>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <!--        <div class="singular-content-wrap">-->
