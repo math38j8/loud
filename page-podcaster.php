@@ -51,9 +51,9 @@ get_header();
         </section>
 -->
 
-        <h3>Lyt til</h3>
+        <h3>Lyt til...</h3>
         <div class="filtreringsknap">
-            <button class="filtrer">Filtrer</button>
+            <button class="filtrer">Vælg genre</button>
         </div>
         <nav id="filtrering"><button class="filter_button" data-episode="alle">Alle</button></nav>
         <section id="udforsk" class="episode_container slider">

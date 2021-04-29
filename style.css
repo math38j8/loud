@@ -203,11 +203,34 @@ Template: twentytwenty
 
 }
 
+#lydunivers h3 {
+    font-size: 2.3rem;
+}
+
+#udforskLoudsLydunivers {
+    margin-left: 5vw;
+}
+
+.popular_podcast {
+    margin-left: 5vw;
+
+}
+
 #hvem_er_loud {
     background-color: #dc0032;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+}
+
+#hvem_er_loud h2,
+#hvem_er_loud p {
+    margin-left: 5vw;
+}
+
+#hvem_er_loud h3 {
+    font-weight: 500;
+    font-size: 2.1rem;
 }
 
 .col {
@@ -490,6 +513,11 @@ button {
         background-color: #dc0032;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    #hvem_er_loud h2,
+    #hvem_er_loud p {
+        margin-left: 0vw;
     }
 
     .col {
