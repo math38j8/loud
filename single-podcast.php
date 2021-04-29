@@ -31,7 +31,6 @@ get_header();
                 <p class="genre"></p>
                 <a href="#episode">
                     <button class="hoer_seneste">Hør seneste afsnit</button></a>
-
             </div>
 
         </article>
@@ -88,7 +87,7 @@ get_header();
 
 
 
-<!--
+        <!--
         <section id="forslag">
             <h2>Vi tror, at du kan lide</h2>
         </section>

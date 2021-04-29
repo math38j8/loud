@@ -33,7 +33,7 @@
             <h2>Indhold</h2>
             <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Podcasts</a>
             <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Lyt med</a>
-            <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/podcaster/">Sendeplan</a>
+            <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/sendeplan/">Sendeplan</a>
         </div>
 
         <div class="footer_column">
