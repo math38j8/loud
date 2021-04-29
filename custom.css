@@ -205,6 +205,10 @@ i {
         font-size: 1.5rem;
     }
 
+    .post-inner {
+        padding-bottom: 8rem;
+    }
+
     .appstore {
         width: 53%;
         position: relative;
