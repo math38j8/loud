@@ -36,6 +36,20 @@ footer a {
     font-weight: 400;
 }
 
+.fa {
+    color: white;
+}
+
+i {
+    font-style: normal;
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
 @media (min-width:600px) {
 
     /*forside*/
