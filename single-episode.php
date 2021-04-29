@@ -34,9 +34,16 @@ get_header();
             </div>
         </article>
 
-        <section id="episoder">
+        <section id="episode">
+            <h4>Alle afsnit af</h4>
+            <div class="maaned">
+                <p>APRIL 2021</p>
+                <p class="semere">SE MINDRE</p>
+            </div>
+            <div class="linje"></div>
+
             <template>
-                <article>
+                <article class="single_podcast">
                     <img class="single_episode" src="" alt="">
                     <div class="afsnit_navn">
                         <h2></h2>
@@ -46,7 +53,32 @@ get_header();
             </template>
 
         </section>
+        <section id="episode">
+            <div class="maaned">
+                <p>MARTS 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
 
+            <div class="maaned">
+                <p>FEBRUAR 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+
+
+            <div class="maaned">
+                <p>JANUAR 2021</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+
+            <div class="maaned">
+                <p>DECEMBER 2020</p>
+                <p class="semere">SE MERE</p>
+            </div>
+            <div class="linje"></div>
+        </section>
 
     </main><!-- #main -->
     <script>
@@ -57,7 +89,7 @@ get_header();
         const episodeUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode?per_page=100";
         const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode/" + <?php echo get_the_ID() ?>;
 
-        const container = document.querySelector("#episoder");
+        const container = document.querySelector("#episode");
 
         async function getJson() {
             console.log("getJson");
