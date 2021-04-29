@@ -35,7 +35,7 @@
         <i class="fa fa-youtube-play" aria-hidden="true"></i>
 
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/googleplay.png">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg" class="appstore">
 
 
 
