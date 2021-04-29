@@ -10,6 +10,13 @@ h4 {
 }
 
 /*FOOTER */
+
+.afspiller {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
 .footer_logo {
     width: 10vw;
 }

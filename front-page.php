@@ -43,8 +43,14 @@
     </div>
 </div>
 
+<div class="afspiller_div">
+    <div class="afspiller">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/afspiller.png">
+    </div>
+</div>
 
 <main id="site-content" role="main">
+
     <h2 class="popular_podcast">Populære podcasts</h2>
     <section id="populaere" class="episode_container slider"></section>
     <div class="knap_div">
@@ -168,6 +174,8 @@
 
     <?php get_template_part( 'template-parts/pagination' ); ?>
 
+
+
 </main><!-- #site-content -->
 
 
@@ -255,7 +263,8 @@
                     location.href = podcast.link;
                 });
 
-                biografi.appendChild(klon);            }
+                biografi.appendChild(klon);
+            }
         })
 
     }
