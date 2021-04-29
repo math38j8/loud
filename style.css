@@ -413,6 +413,8 @@ button {
 
 .filtrer {
     background-color: transparent;
+    width: 90vw;
+    margin: 0;
 }
 
 .filtreringsknap {
