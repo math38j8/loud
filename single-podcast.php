@@ -86,7 +86,7 @@ get_header();
         </section>
 
         <section id="forslag">
-            <h2>Vi tror at du kan lide</h2>
+            <h2>Vi tror, at du kan lide</h2>
         </section>
 
     </main><!-- #main -->
