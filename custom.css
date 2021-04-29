@@ -36,6 +36,15 @@ footer a {
     font-weight: 400;
 }
 
+.footer_column {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+}
+}
+
 .fa fa-instagram {
     color: white;
 }
@@ -107,6 +116,11 @@ i {
     /*footer*/
     #site-footer {
         background-color: #0d353a;
+    }
+
+    #site-footer .section-inner {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     }
 }
 
