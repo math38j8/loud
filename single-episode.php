@@ -26,9 +26,9 @@ get_header();
                 </div>
             </div>
             <div class="single_episode_div">
+                <h3 class="podcastnavn"></h3>
                 <h2></h2>
                 <p class="beskrivelse"></p>
-                <p class="podcastnavn"></p>
                 <p class="udgivelsesdato"></p>
                 <p class="medvirkende"></p>
             </div>
@@ -36,6 +36,7 @@ get_header();
 
         <section id="episode">
             <h4>Alle afsnit af</h4>
+            <h4 id="alleafsnit"></h4>
             <div class="maaned">
                 <p>APRIL 2021</p>
                 <p class="semere">SE MINDRE</p>
@@ -109,9 +110,10 @@ get_header();
             document.querySelector("h2").innerHTML = episode.title.rendered;
             document.querySelector(".pic").src = episode.billede.guid;
             document.querySelector(".beskrivelse").innerHTML = episode.beskrivelse;
-            document.querySelector(".podcastnavn").innerHTML = episode.beliggenhed;
+            document.querySelector(".podcastnavn").innerHTML = episode.podcastnavn;
             document.querySelector(".udgivelsesdato").innerHTML = episode.udgivelsesdato;
             document.querySelector(".medvirkende").innerHTML = episode.medvirkende;
+            document.querySelector("#alleafsnit").innerHTML = episode.podcastnavn;
 
         }
 
