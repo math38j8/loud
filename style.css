@@ -648,7 +648,7 @@ button {
     }
 
     .lytmedher {
-        margin-bottom: 3vw;
+        margin-bottom: 0vw;
     }
 
     /*    SINGLE EPISODE*/
@@ -712,6 +712,15 @@ button {
     #udforsk h4 {
         width: 15vw;
         font-size: 2rem;
+    }
+
+    .single_episode_div {
+        padding: 0vw;
+        margin-right: 9vw;
+    }
+
+    .single_episode_div h2 {
+        margin-top: 0vw;
     }
 
     /*    SINGLE EPISODE */

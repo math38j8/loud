@@ -38,9 +38,11 @@
 
         <div class="footer_column">
             <h2>Hold dig opdateret</h2>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/facebook.svg" class="some_icons">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/instagram.svg" class="some_icons">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/youtube.svg" class="some_icons">
+            <div class="some">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/facebook.svg" class="some_icons">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/instagram.svg" class="some_icons">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/youtube.svg" class="some_icons">
+            </div>
         </div>
 
         <div class="footer_column apple_google">

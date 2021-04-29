@@ -29,7 +29,8 @@ get_header();
                 <h2></h2>
                 <p class="beskrivelse"></p>
                 <p class="genre"></p>
-                <button class="hoer_seneste">Hør seneste afsnit</button>
+                <a href="#episode">
+                    <button class="hoer_seneste">Hør seneste afsnit</button></a>
 
             </div>
 

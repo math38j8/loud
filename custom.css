@@ -45,7 +45,14 @@ footer a {
 }
 
 .some_icons {
-    width: 1vw;
+    width: 9vw;
+    height: 9vw;
+}
+
+.some {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8vw;
 }
 
 
@@ -142,6 +149,23 @@ i {
     .footer_column {
 
         justify-items: left;
+    }
+
+    .some {
+        gap: 2vw;
+    }
+
+    .some_icons {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    footer h2 {
+        text-align: left;
+    }
+
+    .footer-top-hidden #site-footer {
+        margin-top: 0rem;
     }
 }
 
