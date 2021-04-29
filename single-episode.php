@@ -15,7 +15,16 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <article class="single_episode_article">
-            <img class="pic" src="" alt="">
+            <div class="single_col">
+                <img class="pic" src="" alt="">
+                <div class="lytmedher">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/googlepodcast.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podcastplayer.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/spotify.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podimo.svg">
+                </div>
+            </div>
             <div class="single_episode_div">
                 <h2></h2>
                 <p class="beskrivelse"></p>
@@ -40,12 +49,12 @@ get_header();
         }
 
         function visEpisoder() {
-            document.querySelector("h2").textContent = episode.title.rendered;
+            document.querySelector("h2").innerHTML = episode.title.rendered;
             document.querySelector(".pic").src = episode.billede.guid;
-            document.querySelector(".beskrivelse").textContent = episode.beskrivelse;
-            document.querySelector(".podcastnavn").textContent = episode.beliggenhed;
-            document.querySelector(".udgivelsesdato").textContent = episode.udgivelsesdato;
-            document.querySelector(".medvirkende").textContent = episode.medvirkende;
+            document.querySelector(".beskrivelse").innerHTML = episode.beskrivelse;
+            document.querySelector(".podcastnavn").innerHTML = episode.beliggenhed;
+            document.querySelector(".udgivelsesdato").innerHTML = episode.udgivelsesdato;
+            document.querySelector(".medvirkende").innerHTML = episode.medvirkende;
 
         }
 

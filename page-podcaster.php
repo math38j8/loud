@@ -49,6 +49,9 @@ get_header();
             <section id="populaere episode_container slider"></section>
         </section>
 -->
+        <div class="filtreringsknap">
+            <button class="filtrer">Filtrer</button>
+        </div>
         <nav id="filtrering"><button class="filter_button" data-episode="alle">Alle</button></nav>
         <section id="udforsk" class="episode_container slider">
 
@@ -58,6 +61,12 @@ get_header();
     </main><!-- #main -->
 
     <script>
+        window.addEventListener('DOMContentLoaded', sidenVises);
+
+
+
+
+
         let episoder;
         let podcaster;
         let categories;
@@ -101,6 +110,18 @@ get_header();
             console.log("filterPodcast", filterPodcast);
 
             visPodcaster();
+        }
+
+        function sidenVises() {
+            console.log("siden vises");
+            document.querySelector("#filtrering").classList.add("hide");
+            document.querySelector(".filtrer").addEventListener("click", visFiltrer);
+        }
+
+        function visFiltrer() {
+            console.log("vis filtrer");
+            document.querySelector("#filtrering").classList.toggle("hide");
+
         }
 
         function visEpisoder() {

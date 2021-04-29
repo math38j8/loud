@@ -49,3 +49,8 @@
         background-color: #0d353a;
     }
 }
+
+
+.hide {
+    display: none !important;
+}

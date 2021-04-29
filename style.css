@@ -92,10 +92,14 @@ Template: twentytwenty
 
 #udforsk .slide {
     width: 33vw;
+    display: flex;
+    justify-content: center;
+    height: 32vw;
 }
 
 #udforsk .hover_container {
     width: 28vw;
+    height: 28vw;
 }
 
 #udforsk h4 {
@@ -154,7 +158,7 @@ Template: twentytwenty
     height: 100%;
     width: 100%;
     opacity: 0;
-    border-radius: 15px;
+    border-radius: 7px;
     transition: .5s ease;
     background-color: rgba(18, 66, 72, 0.72);
 }
@@ -264,12 +268,10 @@ Template: twentytwenty
 element {}
 
 .lytmedher img {
-
-    width: 5vw;
+    width: 10vw;
     margin-top: 0vw;
     padding: 1vw;
-    height: 5vw;
-
+    height: 11vw;
 }
 
 .hoer_seneste {
@@ -348,7 +350,7 @@ button {
 
 /*PAGE PODCASTER*/
 .podcaster_img {
-    border-radius: 15px;
+    border-radius: 7px;
     filter: drop-shadow(5px 5px 5px #0000005e);
 }
 
@@ -361,12 +363,18 @@ button {
     background-color: transparent;
     width: 40vw;
     height: 14vw;
+    border: transparent;
+    margin: 1vw;
+    padding: 1vw;
 }
 
 .filter_button {
     background-color: transparent;
     width: 40vw;
     height: 14vw;
+    border: transparent;
+    margin: 1vw;
+    padding: 1vw;
 }
 
 .podcast_article {
@@ -379,6 +387,19 @@ button {
     width: 31vw;
 }
 
+.filtrer {
+    background-color: transparent;
+}
+
+.filtreringsknap {
+    display: flex;
+    justify-content: right;
+}
+
+#filtrering {
+    display: grid;
+    justify-content: right;
+}
 
 /*------------*/
 /*Slider*/
@@ -441,11 +462,9 @@ button {
     }
 
     .overlay h4 {
-
         font-size: 24px;
-        top: 16%;
-        width: 18vw;
-
+        top: 28%;
+        width: 14vw;
     }
 
     .uddrag {
@@ -536,14 +555,16 @@ button {
 
 
     /*    SINGLE PODCAST*/
-    .single_pic {
+    .single_pic,
+    .pic {
         width: 60%;
         border-radius: 22px;
         filter: drop-shadow(5px 5px 5px #0000005e);
 
     }
 
-    .single_article {
+    .single_article,
+    .single_episode_article {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -614,7 +635,7 @@ button {
 
     /*    SINGLE EPISODE*/
 
-    .pic {
+        {
         width: 60%;
         border-radius: 22px;
         filter: drop-shadow(5px 5px 5px #0000005e);
@@ -657,5 +678,25 @@ button {
         width: 89vw;
         padding: 2vw;
     }
+
+    #udforsk .hover_container {
+        width: 18vw;
+        height: 16vw;
+    }
+
+    #udforsk .slide {
+        width: 16vw;
+        display: flex;
+        justify-content: center;
+        height: 16vw;
+    }
+
+    #udforsk h4 {
+        width: 15vw;
+        font-size: 2rem;
+    }
+
+    /*    SINGLE EPISODE */
+
 
 }

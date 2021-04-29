@@ -220,14 +220,19 @@
             });
             if (podcast.genre.includes(parseInt(13))) {
                 populaere.appendChild(klon);
-            };
+            }
             if (podcast.genre.includes(parseInt(14))) {
                 console.log("14", podcast.genre);
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
 
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+
                 aktuelt.appendChild(klon);
+
                 // aktuelt.innerHTML += "hej";
             };
             if (podcast.genre.includes(parseInt(12))) {
@@ -235,6 +240,11 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
+
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+
                 satire.appendChild(klon);
             };
             if (podcast.genre.includes(parseInt(19))) {
@@ -242,6 +252,11 @@
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
                 klon.querySelector("img").src = podcast.billede.guid;
+
+                klon.querySelector("article").addEventListener("click", () => {
+                    location.href = podcast.link;
+                });
+
                 biografi.appendChild(klon);
             }
         })
