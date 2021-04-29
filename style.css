@@ -597,6 +597,10 @@ button {
         margin-bottom: 0vw;
     }
 
+    .single_tekst h2 {
+        margin-left: 0vw;
+    }
+
     .single_episode {
         width: 8vw;
     }
