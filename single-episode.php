@@ -34,18 +34,43 @@ get_header();
             </div>
         </article>
 
+        <section id="episoder">
+            <template>
+                <article>
+                    <img class="single_episode" src="" alt="">
+                    <div class="afsnit_navn">
+                        <h2></h2>
+                        <p class="beskrivelse"></p>
+                    </div>
+                </article>
+            </template>
+
+        </section>
+
+
     </main><!-- #main -->
     <script>
+        let episoder;
         let episode;
+        let aktuelpodcast;
 
+        const episodeUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode?per_page=100";
         const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/episode/" + <?php echo get_the_ID() ?>;
+
+        const container = document.querySelector("#episoder");
 
         async function getJson() {
             console.log("getJson");
             const data = await fetch(dbUrl);
             episode = await data.json();
-            console.log(episode);
+            aktuelpodcast = episode.horer_til_podcast;
+            console.log(aktuelpodcast);
+
+            const data2 = await fetch(episodeUrl);
+            episoder = await data2.json();
+
             visEpisoder();
+            visPodcasten();
         }
 
         function visEpisoder() {
@@ -57,6 +82,29 @@ get_header();
             document.querySelector(".medvirkende").innerHTML = episode.medvirkende;
 
         }
+
+        function visPodcasten() {
+            console.log("visEpisode");
+            let temp = document.querySelector("template");
+            episoder.forEach(episode => {
+                console.log("loop id :", aktuelpodcast);
+                if (episode.horer_til_podcast == aktuelpodcast) {
+                    console.log("loop kører id :", aktuelpodcast);
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").innerHTML = episode.title.rendered;
+                    klon.querySelector("img").src = episode.billede.guid;
+
+                    //                    klon.querySelector(".beskrivelse").innerHTML = episode.beskrivelse;
+                    klon.querySelector("article").addEventListener("click", () => {
+                        location.href = episode.link;
+                    })
+                    //                    klon.querySelector("a").href = episode.link;
+                    console.log("episode", episode.link);
+                    container.appendChild(klon);
+                }
+            })
+        }
+
 
         getJson();
 
