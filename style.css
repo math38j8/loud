@@ -12,7 +12,7 @@ Template: twentytwenty
 
 /*-----SPLASH ----*/
 .splash {
-    background-image: url(images/slashbillede1.jpg);
+    background-image: url(images/slashbillede.png);
     background-size: cover;
     height: 100vh;
     background-position: 50% 20%
