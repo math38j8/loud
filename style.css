@@ -633,6 +633,16 @@ button {
         background-color: #124248;
     }
 
+    .lytmedher img {
+        width: 5vw;
+        margin-top: -4vw;
+        padding: 1vw;
+        height: 5vw;
+    }
+
+    .lytmedher {
+        margin-bottom: 12vw;
+    }
 
     /*    SINGLE EPISODE*/
 

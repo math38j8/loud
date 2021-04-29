@@ -39,6 +39,7 @@ get_header();
 
         <section id="episode">
             <h4>Alle afsnit af</h4>
+            <h4 id="alleafsnit"></h4>
             <div class="maaned">
                 <p>APRIL 2021</p>
                 <p class="semere">SE MINDRE</p>
@@ -130,6 +131,7 @@ get_header();
             document.querySelector(".single_pic").src = podcast.billede.guid;
             document.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
             document.querySelector(".genre").textContent = podcast.genre;
+            document.querySelector("#alleafsnit").textContent = podcast.title.rendered;
 
         }
 
