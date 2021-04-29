@@ -591,6 +591,16 @@ button {
         gap: 1.5vw;
     }
 
+    .filtrer {
+        background-color: transparent;
+        width: 14vw;
+        margin: 0 5vw;
+    }
+
+    .filtreringsknap {
+        display: flex;
+        justify-content: right;
+    }
 
     /*    SINGLE PODCAST*/
     .single_pic,
