@@ -17,7 +17,7 @@
     <div class="section-inner">
 
         <div class="footer_column">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg" class="footer_logo">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg" class="footer_logo" alt="loud logo">
         </div>
 
         <div class="footer_column">
@@ -39,15 +39,15 @@
         <div class="footer_column">
             <h2>Hold dig opdateret</h2>
             <div class="some">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/facebook.svg" class="some_icons">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/instagram.svg" class="some_icons">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/youtube.svg" class="some_icons">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/facebook.svg" class="some_icons" alt="facebook ikon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/instagram.svg" class="some_icons" alt="instagram ikon">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/youtube.svg" class="some_icons" alt="youtube ikon">
             </div>
         </div>
 
         <div class="footer_column apple_google">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/googleplay.png">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg" class="appstore">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/googleplay.png" alt="googleplay ikon">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/appstore.svg" class="appstore" alt="appstore ikon">
         </div>
 
 

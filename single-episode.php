@@ -18,11 +18,11 @@ get_header();
             <div class="single_col">
                 <img class="pic" src="" alt="">
                 <div class="lytmedher">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/googlepodcast.svg">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podcastplayer.svg">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/spotify.svg">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podimo.svg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/loud.svg" alt="loud logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/googlepodcast.svg" alt="google podcast logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podcastplayer.svg" alt="podcastplayer">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/spotify.svg" alt="spotify logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/svg/podimo.svg" alt="podimo logo">
                 </div>
             </div>
             <div class="single_episode_div">

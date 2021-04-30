@@ -248,8 +248,8 @@ i {
 
     .afspiller_div {
         display: block;
-        position: sticky;
-        top: 48vw;
+        position: fixed;
+        bottom: 0;
         z-index: 9;
     }
 }

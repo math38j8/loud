@@ -45,7 +45,7 @@
 
 <div class="afspiller_div">
     <div class="afspiller">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/afspiller.png">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/afspiller.png" alt="afspilningsbar">
     </div>
 </div>
 

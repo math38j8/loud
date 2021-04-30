@@ -68,7 +68,14 @@ Template: twentytwenty
 }
 
 /*---------------------------*/
+/*BURGERMENU*/
+.ancestor-wrapper a {
+    color: white !important;
+}
 
+.toggle-text {
+    display: none;
+}
 
 /*-------FORSIDE------*/
 #groen {
@@ -423,7 +430,7 @@ button {
 
 #filtrering {
     display: grid;
-    justify-content: right;
+    justify-content: center;
     background-color: #124248;
 }
 
