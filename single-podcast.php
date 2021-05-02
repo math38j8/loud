@@ -28,8 +28,7 @@ get_header();
             <div class="single_tekst">
                 <h2></h2>
                 <p class="beskrivelse"></p>
-                <p class="genre"></p>
-                <a href="#episode">
+<!--                <p class="genre"></p>-->                <a href="#episode">
                     <button class="hoer_seneste">Hør seneste afsnit</button></a>
             </div>
 
@@ -134,7 +133,7 @@ get_header();
             document.querySelector("h2").textContent = podcast.title.rendered;
             document.querySelector(".single_pic").src = podcast.billede.guid;
             document.querySelector(".beskrivelse").textContent = podcast.beskrivelse;
-            document.querySelector(".genre").textContent = podcast.genre;
+            //document.querySelector(".genre").textContent = podcast.genre;
             document.querySelector("#alleafsnit").textContent = podcast.title.rendered;
 
         }

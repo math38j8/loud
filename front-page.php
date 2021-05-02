@@ -75,6 +75,11 @@
             <h3 class="branchen">Branchen og pressen gravede vores grav - Nu sender vi fra dybet!</h3>
 
             <p>LOUD er en Lydfabrik, der skaber podcast og radio til de unge. Vi har haft en hård medfart, men det har gjort os endnu mere motiverede til at vise jer, at vi kan og vil skabe relevant indhold, som både er aktuelt og spændende. Læs mere om vores vision her.</p>
+
+            <div class="knap_om_os">
+                <a href="http://mathildesahlholdt.com/kea/sem2/09_cms/loud/om-loud/">
+                    <button class="hoer_seneste semere_knap">Se mere</button></a>
+            </div>
         </div>
         <div class="dybet"></div>
     </section>

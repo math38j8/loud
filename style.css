@@ -243,6 +243,20 @@ Template: twentytwenty
 .col {
     margin-left: 5vw;
     margin-right: 7vw;
+    /*
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+*/
+}
+
+.knap_om_os {
+    display: grid;
+    justify-content: center;
+}
+
+.semere_knap {
+    margin-left: 5vw;
 }
 
 .dybet {
@@ -251,7 +265,7 @@ Template: twentytwenty
     background-image: url(images/dybet.svg);
     background-repeat: no-repeat;
     margin-left: 0vw;
-    margin-top: 0vw;
+    margin-top: 8vw;
 }
 
 
@@ -495,7 +509,7 @@ button {
 
     /*    ----splash*/
     .splash {
-        background-image: url(images/slashbillede.png);
+        background-image: url(images/slashbillede_lille.jpg);
         background-size: cover;
         height: 100vh;
         background-position: 100%
@@ -532,6 +546,7 @@ button {
     .col {
         margin-left: 16vw;
         margin-right: 8vw;
+        justify-content: left;
     }
 
     .col h2 {
@@ -540,6 +555,10 @@ button {
 
     .col .branchen {
         font-size: 2rem;
+    }
+
+    .semere_knap {
+        margin-left: 0vw;
     }
 
     .dybet {
