@@ -185,54 +185,45 @@
 
 
 <script>
-    let populaere = document.querySelector("#populaere");
-    let aktuelt = document.querySelector("#lydunivers #aktuelt");
-    let satire = document.querySelector("#lydunivers #satire");
-    let biografi = document.querySelector("#lydunivers #biografi");
-    let podcaster;
+    let populaere = document.querySelector("#populaere"); //laver variabel 'populaere' som er vores section 'populære'
+    let aktuelt = document.querySelector("#lydunivers #aktuelt"); //laver variabel 'aktuelt' som er vores section 'aktuelt'
+    let satire = document.querySelector("#lydunivers #satire"); //laver variabel 'satire' som er vores section 'satire'
+    let biografi = document.querySelector("#lydunivers #biografi"); //laver variabel 'biografi' som er vores section 'biografi'
+    let podcaster; //laver variabel 'podcaster'
 
-    //    let genre;
-    let filterPodcast = "alle";
+    let filterPodcast = "alle"; //laver variabel 'filterPodcast' som er lig med "alle"
 
-
-    const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast?per_page=100";
-
-    //    const genreUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/genre";
+    const dbUrl = "http://mathildesahlholdt.com/kea/sem2/09_cms/loud/wp-json/wp/v2/podcast?per_page=100"; //laver konstnat dbUrl som er lig med alle podcasts
 
     async function getJson() {
         console.log("getJson");
-        const data = await fetch(dbUrl);
-        podcaster = await data.json();
+        const data = await fetch(dbUrl); //laver konstant 'data' som henter data via dbUrl variablen
+        podcaster = await data.json(); //podcaster henter json data
 
-        visPodcaster();
+        visPodcaster(); //Sætter funktionen visPodcaster igang
 
     }
 
-
-
-
     function visPodcaster() {
-        let temp = document.querySelector("template");
-        let container = document.querySelector(".episode_container");
+        let temp = document.querySelector("template"); //laver variabel 'temp' som er vores med template
+        let container = document.querySelector(".episode_container"); //laver variabel container som er klassen .epi...
 
-
-        container.innerHTML = "";
+        container.innerHTML = ""; //fjerner indhold i containeren
 
         console.log(podcaster);
-        podcaster.forEach(podcast => {
+        podcaster.forEach(podcast => { //sætter forEach loop igang
 
-            //            if (filterPodcast == "alle" || podcast.genre.includes(parseInt(filterPodcast))) {
-            let klon = temp.cloneNode(true).content;
-            klon.querySelector("h4").innerHTML = podcast.title.rendered;
-            klon.querySelector("img").src = podcast.billede.guid;
+            let klon = temp.cloneNode(true).content; //laver varianel 'klon' som får indsat indhold i template
+            klon.querySelector("h4").innerHTML = podcast.title.rendered; //indsætter podcast-titlen i H4
+            klon.querySelector("img").src = podcast.billede.guid; //indsætter billede
 
-            klon.querySelector("article").addEventListener("click", () => {
-                location.href = podcast.link;
+            klon.querySelector("article").addEventListener("click", () => { //Eventlistener click på hele article
+                location.href = podcast.link; //og kommer videre til podcast singleview
             });
-            if (podcast.genre.includes(parseInt(13))) {
-                populaere.appendChild(klon);
+            if (podcast.genre.includes(parseInt(13))) { //hvis podcasten har genre-id'et 13 på sig
+                populaere.appendChild(klon); //indsæt podcasten i section populaere
             }
-            if (podcast.genre.includes(parseInt(14))) {
+            if (podcast.genre.includes(parseInt(14))) { //hvis podcasten har genre-id'et 14 på sig
                 console.log("14", podcast.genre);
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
@@ -242,11 +233,10 @@
                     location.href = podcast.link;
                 });
 
-                aktuelt.appendChild(klon);
+                aktuelt.appendChild(klon); //indsæt podcasten i section aktuelt
 
-                // aktuelt.innerHTML += "hej";
             };
-            if (podcast.genre.includes(parseInt(12))) {
+            if (podcast.genre.includes(parseInt(12))) { //hvis podcasten har genre-id'et 12 på sig
                 console.log("12", podcast);
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
@@ -256,9 +246,9 @@
                     location.href = podcast.link;
                 });
 
-                satire.appendChild(klon);
+                satire.appendChild(klon); //indsæt podcasten i section satire
             };
-            if (podcast.genre.includes(parseInt(19))) {
+            if (podcast.genre.includes(parseInt(19))) { //hvis podcasten har genre-id'et 19 på sig
                 console.log("19", podcast);
                 let klon = temp.cloneNode(true).content;
                 klon.querySelector("h4").innerHTML = podcast.title.rendered;
@@ -268,17 +258,12 @@
                     location.href = podcast.link;
                 });
 
-                biografi.appendChild(klon);
+                biografi.appendChild(klon); //indsæt podcasten i section biografi
             }
         })
-
     }
 
-    //    else {
-    // container.appendChild(klon);
-    // }
-
-    getJson();
+    getJson(); //henter JSON data
 
 </script>
 
